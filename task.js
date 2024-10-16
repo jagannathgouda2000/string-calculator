@@ -4,7 +4,7 @@ function add() {
         document.querySelector("#result").innerHTML = "0";
         return  
     }
-    const numbers = inputString.split(",");
+    const numbers = inputString.split(/[n,]+/); //splitting on both comma and new line
     const answer = numbers.reduce((result,currentvalue) => {
         return result + parseInt(currentvalue);
     },0)
